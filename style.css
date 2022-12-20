@@ -1,0 +1,33 @@
+body {
+    height: 100vh;    
+}
+
+.container {
+    display: grid;
+    height: 100% ;
+    grid-template-rows: repeat(auto, auto);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 500px;
+    width: 500px;
+    place-self: center;
+}
+
+.game-board > div {
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
+
+.top,
+.middle {
+    border-bottom: 1px solid black;
+}
+
+.first, .second{
+    border-right: 1px solid black;
+}
