@@ -1,20 +1,35 @@
 body {
-    height: 100vh;    
+    height: 100%;
+    background-color: honeydew;    
 }
 
-.container {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Game Display */
+
+.game-container {
+    position: absolute;
+    top: 0%;
     display: grid;
-    height: 100% ;
+    width: 100%;
+    height: 100%;
     grid-template-rows: repeat(auto, auto);
+    visibility: hidden;
+    z-index: 1;
+    background-color: honeydew;
 }
 
 .game-board {
+    margin-top: -4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 500px;
     width: 500px;
-    place-self: center;
+    justify-self: center;
 }
 
 .game-board > div {
@@ -30,4 +45,111 @@ body {
 
 .first, .second{
     border-right: 1px solid black;
+}
+
+.players-name {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-around;
+}
+
+.game-btns {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    gap: 3rem;
+}
+
+.new-round , .restart {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border-color: grey;
+    background-color: lightblue;
+    color: grey;
+}
+
+.new-round:hover , .restart:hover {
+    border-color: lightblue;
+    background-color: grey;
+    color: lightblue;
+}
+
+.go-back > div {
+    width: fit-content;
+    cursor: pointer;
+}
+
+.winner {
+    margin-top: -5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.winner > *{
+    font-size: 5rem;
+}
+/* Start Menu*/
+
+.title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    color: rgb(50, 50, 240);
+}
+
+.players {
+    display: grid;
+    visibility: hidden;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.game-selector {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.pve > button, .pvp > button {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border-color: green;
+    background-color: aqua;
+    color: green;
+}
+
+.pve > button:hover, .pvp > button:hover { 
+    background-color: green;
+    color: aqua;
+    border-color: aqua;
+}
+
+.start-container {
+    display: grid;
+    justify-content: center;
+    height: 3rem;
+}
+
+.start-game {
+    font-size: 1rem;
+    padding: 0.6rem 6rem;
+    border-radius: 1rem;
+    border-color: green;
+    background-color: aqua;
+    color: green;
+}
+
+.start-game:hover {
+    background-color: green;
+    color: aqua;
+    border-color: aqua;
+}
+.visible {
+    visibility: visible;
 }

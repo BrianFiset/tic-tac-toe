@@ -8,10 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="title">
-        Tic Tac Toe
-    </div>
     <div class="container">
+        <div class="title">
+            Tic Tac Toe
+        </div>
+        <div class="game-selector">
+            <div class="pve">
+                <button>Player VS AI</button>
+            </div>
+            <div class="pvp">
+                <button>Player VS Player</button>
+            </div>
+        </div>
+        <form action="" class="players" onsubmit="return false">
+            <div class="player1">
+                <label for="player1">Player 1</label>
+                <input type="text" id="player1" name="player1" required>
+            </div>
+            <div class="player2">
+                <label for="player2">Player 2</label>
+                <input type="text" id="player2" name="player2" required>
+            </div>
+            <div class="start-container"><button class="start-game">Start</button></div>
+        </form>
+    </div>
+    <div class="game-container">
+        <div class="go-back"><div>Back</div></div>
+        <div class="players-name">
+            <div class="player1-name">Player 1: </div>
+            <div class="player2-name">Player 2: </div>
+        </div>
+        <div class="winner"></div>
         <div class="game-board">
             <div id="1" class="first top"></div>
             <div id="2" class="second top"></div>
@@ -22,7 +49,11 @@
             <div id="7" class="first bottom"></div>
             <div id="8" class="second bottom"></div>
             <div id="9" class="third bottom"></div>
-            <p></p>
+        </div>
+
+        <div class="game-btns">
+            <button class="new-round">New Round</button>
+            <button class="restart">New Game</button>
         </div>
     </div>
     <script src="script.js"></script>
