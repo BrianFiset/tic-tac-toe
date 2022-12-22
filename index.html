@@ -20,17 +20,32 @@
                 <button>Player VS Player</button>
             </div>
         </div>
-        <form action="" class="players" onsubmit="return false">
-            <div class="player1">
-                <label for="player1">Player 1</label>
-                <input type="text" id="player1" name="player1" required>
-            </div>
-            <div class="player2">
-                <label for="player2">Player 2</label>
-                <input type="text" id="player2" name="player2" required>
-            </div>
-            <div class="start-container"><button class="start-game">Start</button></div>
-        </form>
+        <div class="form-container">
+            <form action="" class="players" onsubmit="return false">
+                <div class="player1">
+                    <label for="player1">Player 1</label>
+                    <input type="text" id="player1" name="player1" required>
+                </div>
+                <div class="player2">
+                    <label for="player2">Player 2</label>
+                    <input type="text" id="player2" name="player2" required>
+                </div>
+                <div class="start-container"><button class="start-game">Start</button></div>
+            </form>
+            <form action="" class="player-vs-ai" onsubmit="return false">
+                <div class="player11">
+                    <label for="player11">Player 1</label>
+                    <input type="text" id="player11" name="player11" required>
+                </div>
+                <div class="ai">
+                    Ai difficulty
+                    <select name="ai" id="ai">
+                        <option value="easy">Easy</option>
+                    </select>
+                </div>
+                <div class="start-container"><button class="start-pve">Start</button></div>
+            </form>
+        </div>
     </div>
     <div class="game-container">
         <div class="go-back"><div>Back</div></div>
